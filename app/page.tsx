@@ -53,7 +53,7 @@ export default function Home() {
             Senior full stack developer.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Laurens Kuiper, a senior full stack developer based in Haarlem, The Netherlands.
+            I´m Laurens Kuiper, a senior full stack developer based in Haarlem, The Netherlands.
             With 10+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in NextJS, React, and Vue.
             As proud owner of Fly The Coop, I aim to deliver high-quality web development services.
           </p>
