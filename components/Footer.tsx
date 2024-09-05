@@ -1,6 +1,8 @@
+import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
+import statamicBadge from '@/images/statamic-badge.svg'
 
 function NavLink({
   href,
@@ -25,10 +27,17 @@ export function Footer() {
       <ContainerOuter>
         <div className="border-t border-zinc-100 pb-16 pt-10 dark:border-zinc-700/40">
           <ContainerInner>
-            <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
+            <div className="flex flex-col items-center justify-center gap-6">
               {/* <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 <NavLink href="/about">Terms & Conditions</NavLink>
               </div> */}
+              <Link href="https://statamic.com/partners/laurens-kuiper">
+                <Image
+                  src={statamicBadge}
+                  alt=""
+                  className="w-40"
+                />
+              </Link>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; 2020 - {new Date().getFullYear()} Laurens Kuiper. All rights reserved.
               </p>
