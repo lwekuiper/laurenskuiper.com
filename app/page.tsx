@@ -89,6 +89,16 @@ export default function Home() {
           </SocialLink>
           <div className="mt-6 flex gap-6 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
             <SocialLink
+              href="https://www.linkedin.com/in/lwekuiper/"
+              aria-label="Follow on LinkedIn"
+              icon={LinkedInIcon}
+            />
+            <SocialLink
+              href="https://github.com/lwekuiper"
+              aria-label="Follow on GitHub"
+              icon={GitHubIcon}
+            />
+            <SocialLink
               href="https://x.com/lwekuiper"
               aria-label="Follow on X"
               icon={XIcon}
@@ -97,16 +107,6 @@ export default function Home() {
               href="https://www.instagram.com/lwekuiper/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com/lwekuiper"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://www.linkedin.com/in/lwekuiper/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
             />
           </div>
         </div>
