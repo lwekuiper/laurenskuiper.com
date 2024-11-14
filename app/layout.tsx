@@ -57,6 +57,7 @@ export default function RootLayout({
       <body className="flex h-full bg-zinc-50 dark:bg-black">
 
         <Script
+          id="person-schema"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
