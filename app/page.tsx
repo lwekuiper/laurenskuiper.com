@@ -71,13 +71,16 @@ export default function Home() {
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <Avatar />
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            My name is Laurens.<br/>
-            Freelance web developer.
+            Hello, I'm Laurens.<br/>
+            <small>Laravel specialist and Statamic partner.</small>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I´m Laurens Kuiper, an experienced full stack developer based in Haarlem, The Netherlands.
             With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, VueJS, Tailwind CSS.
             As proud owner of Fly The Coop, I aim to deliver high-quality web development services.
+          </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            Recent projects include <a href="https://www.theushuaiaexperience.com/en/club" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Ushuaïa Ibiza</a>, <a href="https://www.playasoleil.com" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Playa Soleil</a> and an <a href="https://statamic.com/addons/lwekuiper/activecampaign" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">ActiveCampaign addon</a>.
           </p>
           <SocialLink
             href="mailto:l@urens.me"

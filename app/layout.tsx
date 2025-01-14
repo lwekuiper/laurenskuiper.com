@@ -12,9 +12,9 @@ import { Footer } from '@/components/Footer'
 export const metadata: Metadata = {
   title: {
     template: '%s - Laurens Kuiper',
-    default: 'Laurens Kuiper - Web developer and entrepreneur',
+    default: 'Laurens Kuiper - Laravel specialist and Statamic partner',
   },
-  description: "I'm Laurens, a web developer and entrepreneur based in Haarlem, The Netherlands. I specialize in Laravel and Statamic CMS, and am skilled in NextJS, React, and Vue.",
+  description: "I'm Laurens, a Laravel specialist and Statamic partner based in Haarlem, The Netherlands. I have over a decade of experience in web development, and am skilled in Livewire, VueJS and Tailwind CSS.",
 }
 
 const jsonLd: WithContext<Person> = {
