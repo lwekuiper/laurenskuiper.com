@@ -71,7 +71,7 @@ export default function Home() {
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <Avatar />
           <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hello, I'm Laurens.<br/>
+            Hello, I´m Laurens.<br/>
             <small>Laravel specialist and Statamic partner.</small>
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
