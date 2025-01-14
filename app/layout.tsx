@@ -44,7 +44,24 @@ const jsonLd: WithContext<Person> = {
   knowsAbout: ['Laravel', 'Statamic CMS', 'Livewire', 'Vue.js', 'Tailwind CSS', 'GSAP', 'DevOps'],
   knowsLanguage: ['nl', 'en', 'es'],
   nationality: 'NL',
-  image: 'https://www.laurenskuiper.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.98f1710c.png&w=3840'
+  image: 'https://www.laurenskuiper.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.98f1710c.png&w=3840',
+  subjectOf: [
+    {
+      '@type': 'CreativeWork',
+      name: 'Ushuaïa Ibiza',
+      url: 'https://www.theushuaiaexperience.com/en/club'
+    },
+    {
+      '@type': 'CreativeWork',
+      name: 'Playa Soleil',
+      url: 'https://www.playasoleil.com'
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'ActiveCampaign Addon',
+      url: 'https://statamic.com/addons/lwekuiper/activecampaign'
+    }
+  ]
 };
 
 export default function RootLayout({
