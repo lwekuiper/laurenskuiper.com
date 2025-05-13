@@ -68,16 +68,19 @@ export default function Home() {
   return (
     <>
       <Container className="mt-12 lg:mt-16">
-        <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
+        <div className="max-w-4xl flex flex-col items-center text-center mx-auto">
           <Avatar />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Hello, I´m Laurens.<br/>
-            <small>Laravel specialist and Statamic partner.</small>
-          </h1>
+          <div className="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+            <p className="text-4xl mb-2">Hello, I´m Laurens.</p>
+            <h1 className="text-3xl/none">
+              Certified Laravel developer and Statamic partner.
+            </h1>
+          </div>
+        </div>
+        <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I´m Laurens Kuiper, an experienced full stack developer based in Haarlem, The Netherlands.
-            With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, VueJS, Tailwind CSS.
-            As proud owner of Fly The Coop, I aim to deliver high-quality web development services.
+            I´m Laurens Kuiper, an experienced full stack developer based in Haarlem, The Netherlands.<br />
+            With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, Alpine.js, VueJS, Tailwind CSS and GSAP.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Recent projects include <a href="https://www.theushuaiaexperience.com/en/club" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Ushuaïa Ibiza</a>, <a href="https://www.playasoleil.com" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Playa Soleil</a> and an <a href="https://statamic.com/addons/lwekuiper/activecampaign" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">ActiveCampaign addon</a>.
