@@ -229,7 +229,7 @@ export default function Terms() {
                 <li>The customer takes all necessary measures to ensure that he keeps the information referred to in paragraphs 1 and 2 secret.</li>
                 <li>The obligation of secrecy described in this article does not apply to information:
                   <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                    <li>which was already made public before the customer heard this information or which later became public without being the result of a violation of the customer's duty to confidentiality</li>
+                    <li>which was already made public before the customer heard this information or which later became public without being the result of a violation of the customer&apos;s duty to confidentiality</li>
                     <li>which is made public by the customer due to a legal obligation</li>
                   </ul>
                 </li>
