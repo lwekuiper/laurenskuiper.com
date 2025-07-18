@@ -71,15 +71,15 @@ export default function Home() {
         <div className="max-w-4xl flex flex-col items-center text-center mx-auto">
           <Avatar />
           <div className="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            <p className="text-4xl mb-2">Hello, I´m Laurens.</p>
+            <p className="text-4xl mb-2">Hi, I&apos;m Laurens Kuiper.</p>
             <h1 className="text-3xl/none">
-              Certified Laravel developer and Statamic partner.
+              Laravel Certified Developer & Statamic CMS partner.
             </h1>
           </div>
         </div>
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I´m Laurens Kuiper, an experienced full stack developer based in Haarlem, The Netherlands.<br />
+            I&apos;m an experienced full stack developer based in Haarlem, The Netherlands.<br />
             With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, Alpine.js, VueJS, Tailwind CSS and GSAP.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
