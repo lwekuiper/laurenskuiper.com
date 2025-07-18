@@ -65,7 +65,7 @@ export default function Privacy() {
                 <li>To inform you about changes in our services and products.</li>
                 <li>In order to deliver products and services to you.</li>
                 <li>If we are legally obliged thereto, like data we need for our tax declaration.</li>
-                <li>Data can also be used for promotional or marketing purposes that relate to the type of services provision by Laurens Kuiper. For example, in order to inform you through our newsletter about a new activity of Laurens Kuiper. If you do not want to receive our newsletter, you can click on the button 'unsubscribe' at the end of the newsletter.</li>
+                <li>Data can also be used for promotional or marketing purposes that relate to the type of services provision by Laurens Kuiper. For example, in order to inform you through our newsletter about a new activity of Laurens Kuiper. If you do not want to receive our newsletter, you can click on the button &apos;unsubscribe&apos; at the end of the newsletter.</li>
               </ul>
               <p className="mt-4">We can solely use your data for any other objective than originally intended, if both objectives are closely related.</p>
             </section>
