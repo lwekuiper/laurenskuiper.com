@@ -48,6 +48,7 @@ export function Footer() {
               <div className="flex flex-col gap-6">
                 <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-400 dark:text-zinc-500">
                   <NavLink href="/terms-conditions">Terms & Conditions</NavLink>
+                  <NavLink href="/privacy-policy">Privacy Policy</NavLink>
                 </div>
                 <p className="text-sm text-zinc-400 dark:text-zinc-500">
                   &copy; 2020 - {new Date().getFullYear()} Laurens Kuiper. All rights reserved.
