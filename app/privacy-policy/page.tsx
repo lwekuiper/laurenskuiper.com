@@ -102,7 +102,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 mb-4">
                 View, change or delete data
               </h2>
-              <p>Naturally, you always have the possibility to view, correct or delete all personal data known to us. Hereto you can send a specified request to <a href="mailto:hello@flythecoop.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">hello@flythecoop.com</a>.</p>
+              <p>Naturally, you always have the possibility to view, correct or delete all personal data known to us. Hereto you can send a specified request to <a href="mailto:laurens@laurenskuiper.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">laurens@laurenskuiper.com</a>.</p>
             </section>
 
             <section>
@@ -116,14 +116,14 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 mb-4">
                 Your rights with regard to privacy
               </h2>
-              <p>When you request a viewing, correction, placement or deletion of your personal data, Laurens Kuiper will inform you within five days. You can submit this request through an e-mail to <a href="mailto:hello@flythecoop.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">hello@flythecoop.com</a>.</p>
+              <p>When you request a viewing, correction, placement or deletion of your personal data, Laurens Kuiper will inform you within five days. You can submit this request through an e-mail to <a href="mailto:laurens@laurenskuiper.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">laurens@laurenskuiper.com</a>.</p>
             </section>
 
             <section>
               <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 mb-4">
                 Questions
               </h2>
-              <p>For questions or remarks about the processing of your personal data and this Privacy Statement, you can contact us through an e-mail to <a href="mailto:hello@flythecoop.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">hello@flythecoop.com</a>.</p>
+              <p>For questions or remarks about the processing of your personal data and this Privacy Statement, you can contact us through an e-mail to <a href="mailto:laurens@laurenskuiper.com" className="text-teal-500 hover:text-teal-600 dark:text-teal-400 dark:hover:text-teal-300">laurens@laurenskuiper.com</a>.</p>
             </section>
 
             <div className="mt-8 pt-8 border-t border-zinc-100 dark:border-zinc-700/40">

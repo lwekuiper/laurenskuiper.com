@@ -86,12 +86,12 @@ export default function Home() {
             Recent projects include <a href="https://www.theushuaiaexperience.com/en/club" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Ushuaïa Ibiza</a>, <a href="https://www.playasoleil.com" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Playa Soleil</a> and an <a href="https://statamic.com/addons/lwekuiper/activecampaign" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">ActiveCampaign addon</a>.
           </p>
           <SocialLink
-            href="mailto:l@urens.me"
+            href="mailto:laurens@laurenskuiper.com"
             aria-label="Send an email"
             icon={MailIcon}
             className="mt-6"
           >
-            l@urens.me
+            laurens@laurenskuiper.com
           </SocialLink>
           <div className="mt-6 flex gap-6 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
             <SocialLink

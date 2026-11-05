@@ -22,7 +22,7 @@ const jsonLd: WithContext<Person> = {
   '@type': 'Person',
   name: 'Laurens Kuiper',
   alternateName: 'Laurens',
-  email: 'mailto:l@urens.me',
+  email: 'mailto:laurens@laurenskuiper.com',
   jobTitle: 'Senior Software Engineer',
   url: 'https://www.laurenskuiper.com',
   worksFor: {
