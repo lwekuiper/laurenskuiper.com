@@ -17,7 +17,7 @@ export default function Terms() {
             </h1>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               These terms and conditions govern the provision of services by Laurens Kuiper,
-              trading as Fly The Coop, Chamber of Commerce no. 78749778, established in Haarlem,
+              sole proprietor, Chamber of Commerce no. 78749778, established in Haarlem,
               the Netherlands.
             </p>
           </div>
@@ -26,7 +26,7 @@ export default function Terms() {
         <div className="lg:col-span-2">
           <div className="max-w-2xl space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Fly The Coop applies the NLdigital Terms 2025, the standard terms and conditions
+              Laurens Kuiper applies the NLdigital Terms 2025, the standard terms and conditions
               for the Dutch digital sector, deposited with the district court of Midden-Nederland,
               location Utrecht.
             </p>
