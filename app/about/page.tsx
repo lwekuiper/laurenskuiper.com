@@ -14,7 +14,7 @@ import portraitImage from '@/images/avatar.jpg'
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Laurens Kuiper is a freelance Laravel, Filament and Statamic developer based in Haarlem, the Netherlands, building and running production websites since 2012.',
+  description: 'Laurens Kuiper is a freelance Statamic, Laravel and Filament developer based in Haarlem, the Netherlands, building and running production websites since 2012.',
   alternates: { canonical: '/about' },
 }
 
@@ -71,7 +71,7 @@ export default function About() {
 
         <div className="lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&apos;m Laurens Kuiper, a freelance Laravel, Filament and Statamic developer based in Haarlem.
+            I&apos;m Laurens Kuiper, a freelance Statamic, Laravel and Filament developer based in Haarlem.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>

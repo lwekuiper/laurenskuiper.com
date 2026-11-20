@@ -111,7 +111,7 @@ export default function Home() {
         </div>
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m a freelance Laravel, Filament and Statamic developer based in Haarlem, the Netherlands, building and running production websites since 2012.
+            I&apos;m a freelance Statamic, Laravel and Filament developer based in Haarlem, the Netherlands, building and running production websites since 2012.
             I build, integrate and maintain websites and apps for agencies and businesses across Europe.
           </p>
         </div>

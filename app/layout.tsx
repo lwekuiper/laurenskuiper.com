@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { Footer } from '@/components/Footer'
 
-const description = 'Freelance Laravel, Filament and Statamic developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.'
+const description = 'Freelance Statamic, Laravel and Filament developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.laurenskuiper.com'),
@@ -33,7 +33,7 @@ const jsonLd: WithContext<Person> = {
   name: 'Laurens Kuiper',
   alternateName: 'Laurens',
   email: 'mailto:laurens@laurenskuiper.com',
-  jobTitle: 'Freelance Laravel, Filament and Statamic Developer',
+  jobTitle: 'Freelance Statamic, Laravel and Filament Developer',
   url: 'https://www.laurenskuiper.com',
   sameAs: [
     'https://www.linkedin.com/in/lwekuiper/',
@@ -50,7 +50,7 @@ const jsonLd: WithContext<Person> = {
     addressCountry: 'NL'
   },
   description,
-  knowsAbout: ['Laravel', 'Filament', 'Statamic', 'Livewire', 'Alpine.js', 'Tailwind CSS'],
+  knowsAbout: ['Statamic', 'Laravel', 'Filament', 'Livewire', 'Alpine.js', 'Tailwind CSS'],
   knowsLanguage: ['nl', 'en', 'es'],
   nationality: 'NL',
   image: 'https://www.laurenskuiper.com/laurens-kuiper.jpg',
