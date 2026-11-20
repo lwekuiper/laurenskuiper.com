@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import avatarImage from '@/images/avatar.png'
+import avatarImage from '@/images/avatar.jpg'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },

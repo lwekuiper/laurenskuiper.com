@@ -10,7 +10,7 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import portraitImage from '@/images/avatar.png'
+import portraitImage from '@/images/avatar.jpg'
 
 export const metadata: Metadata = {
   title: 'About',
