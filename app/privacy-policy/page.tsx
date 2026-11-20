@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy policy for services provided by Laurens Kuiper.',
   alternates: { canonical: '/privacy-policy' },
+  openGraph: {
+    title: 'Privacy Policy | Laurens Kuiper',
+    description: 'Privacy policy for services provided by Laurens Kuiper.',
+    url: '/privacy-policy',
+    siteName: 'Laurens Kuiper',
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Laurens Kuiper, Laravel Certified Developer & Statamic Certified Partner' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/opengraph-image'] },
 }
 
 export default function Privacy() {

@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   title: 'About',
   description: 'Laurens Kuiper is a freelance Statamic, Laravel and Filament developer based in Haarlem, the Netherlands, building and running production websites since 2012.',
   alternates: { canonical: '/about' },
+  openGraph: {
+    title: 'About | Laurens Kuiper',
+    description: 'Laurens Kuiper is a freelance Statamic, Laravel and Filament developer based in Haarlem, the Netherlands, building and running production websites since 2012.',
+    url: '/about',
+    siteName: 'Laurens Kuiper',
+    type: 'profile',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Laurens Kuiper, Laravel Certified Developer & Statamic Certified Partner' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/opengraph-image'] },
 }
 
 function SocialLink({

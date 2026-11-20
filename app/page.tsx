@@ -14,6 +14,13 @@ import avatarImage from '@/images/avatar.jpg'
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Laurens Kuiper | Laravel Certified Developer & Statamic Certified Partner',
+    description: 'Freelance Statamic, Laravel and Filament developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.',
+    url: '/',
+    siteName: 'Laurens Kuiper',
+    type: 'website',
+  },
 }
 
 function SocialLink({

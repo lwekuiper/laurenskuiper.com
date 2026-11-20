@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description: 'Terms and conditions for services provided by Laurens Kuiper.',
   alternates: { canonical: '/terms-conditions' },
+  openGraph: {
+    title: 'Terms & Conditions | Laurens Kuiper',
+    description: 'Terms and conditions for services provided by Laurens Kuiper.',
+    url: '/terms-conditions',
+    siteName: 'Laurens Kuiper',
+    type: 'website',
+    images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'Laurens Kuiper, Laravel Certified Developer & Statamic Certified Partner' }],
+  },
+  twitter: { card: 'summary_large_image', images: ['/opengraph-image'] },
 }
 
 export default function Terms() {
