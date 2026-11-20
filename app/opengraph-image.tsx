@@ -20,24 +20,24 @@ export default async function Image() {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: 72,
-          backgroundColor: '#18181b',
-          color: '#f4f4f5',
+          backgroundColor: '#faf7f1',
+          color: '#1c1917',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: 660, height: '100%' }}>
-          <div style={{ display: 'flex', fontSize: 26, color: '#a1a1aa' }}>laurenskuiper.com</div>
+          <div style={{ display: 'flex', fontSize: 26, color: '#5e574c' }}>laurenskuiper.com</div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
             <div style={{ display: 'flex', fontSize: 84, fontWeight: 700, letterSpacing: -2 }}>Laurens Kuiper</div>
-            <div style={{ display: 'flex', marginTop: 20, fontSize: 36, lineHeight: 1.3, color: '#e4e4e7' }}>
+            <div style={{ display: 'flex', marginTop: 20, fontSize: 36, lineHeight: 1.3 }}>
               Laravel Certified Developer & Statamic Certified Partner
             </div>
           </div>
-          <div style={{ display: 'flex', fontSize: 26, lineHeight: 1.4, color: '#a1a1aa' }}>
+          <div style={{ display: 'flex', fontSize: 26, lineHeight: 1.4, color: '#5e574c' }}>
             Freelance Statamic, Laravel and Filament developer in Haarlem, the Netherlands
           </div>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text -- next/og renders plain img elements only */}
-        <img src={portraitSrc} width={340} height={340} style={{ borderRadius: 170, border: '6px solid #3f3f46' }} />
+        <img src={portraitSrc} width={340} height={340} />
       </div>
     ),
     size,
