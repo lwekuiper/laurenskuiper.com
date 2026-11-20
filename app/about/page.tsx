@@ -87,8 +87,25 @@ export default function About() {
               an existing site or for ongoing maintenance.
             </p>
             <p>
-              I&apos;m a Laravel Certified Developer &amp; Statamic Certified
-              Partner and a member of the Laravel Certification Exam Committee.
+              I&apos;m a{' '}
+              <a
+                href="https://verifier.certificationforlaravel.org/cafa8da6-212f-4a82-bc21-7c016448bdc2"
+                className="underline text-blue-400 transition hover:text-zinc-300"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Laravel Certified Developer
+              </a>{' '}
+              &amp;{' '}
+              <a
+                href="https://statamic.com/partners/laurens-kuiper"
+                className="underline text-blue-400 transition hover:text-zinc-300"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Statamic Certified Partner
+              </a>{' '}
+              and a member of the Laravel Certification Exam Committee.
               My own{' '}
               <a
                 href="https://statamic.com/creators/lwekuiper"
