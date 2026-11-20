@@ -23,7 +23,6 @@ export const metadata: Metadata = {
     description,
     siteName: 'Laurens Kuiper',
     type: 'website',
-    images: [{ url: 'https://www.laurenskuiper.com/laurens-kuiper.jpg', width: 800, height: 800, alt: 'Photo of Laurens Kuiper' }],
   },
 }
 
