@@ -88,13 +88,27 @@ const services = [
   },
 ]
 
-function ExternalLink({ href, children }: { href: string, children: React.ReactNode }) {
-  return (
-    <a href={href} className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  )
-}
+const projects = [
+  {
+    title: 'UD Ibiza',
+    href: 'https://www.ibizaud.com',
+    body: 'The official site and online shop of the football club, on Statamic. The full news archive moved over in two languages and the shop took orders from day one.',
+  },
+  {
+    title: 'Unlock Adventures',
+    href: 'https://www.unlockadventures.nl',
+    body: 'A Statamic site for an escape room company, with room pages, price tables the team manages themselves and booking built into the pages.',
+  },
+  {
+    title: 'Statamic addons',
+    href: 'https://statamic.com/creators/lwekuiper',
+    body: 'My own commercial addons on the Statamic Marketplace. They send form submissions straight to ActiveCampaign, HubSpot, Acumbamail and Zapier.',
+  },
+  {
+    title: 'Ushuaïa Ibiza',
+    body: 'The Statamic site of the club, which I built and maintained season after season. Editors published events and line-ups themselves and tickets were ordered on the site itself.',
+  },
+]
 
 export default function Home() {
   return (
@@ -132,12 +146,34 @@ export default function Home() {
             ))}
           </div>
         </div>
+        <div className="max-w-3xl mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
+          <h2 className="text-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+            Selected work
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {projects.map((project) => (
+              <div key={project.title}>
+                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  {project.href ? (
+                    <a
+                      href={project.href}
+                      className="underline decoration-zinc-500 underline-offset-4 transition hover:decoration-zinc-300"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {project.title}
+                    </a>
+                  ) : project.title}
+                </h3>
+                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                  {project.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
           <p className="text-base text-zinc-600 dark:text-zinc-400">
-            Projects include <ExternalLink href="https://www.ibizaud.com">UD Ibiza</ExternalLink>, <ExternalLink href="https://www.unlockadventures.nl">Unlock Adventures</ExternalLink> and my own <ExternalLink href="https://statamic.com/creators/lwekuiper">Statamic addons</ExternalLink>.
-            I also built and maintained the Ushuaïa Ibiza website.
-          </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             Tell me what you are building or what needs taking over.
           </p>
           <SocialLink
