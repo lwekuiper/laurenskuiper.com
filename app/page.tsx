@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import Image from "next/image"
 import Link from 'next/link'
-import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
+import { MailButton } from '@/components/MailButton'
 import {
   GitHubIcon,
   InstagramIcon,
@@ -16,56 +16,61 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
-function Avatar() {
-  return (
-    <Link
-      href="/"
-      aria-label="Home"
-      className="pointer-events-auto"
-    >
-      <Image
-        src={avatarImage}
-        alt="Photo of Laurens Kuiper"
-        sizes="4rem"
-        className="h-32 w-32 rounded-full bg-zinc-100 object-cover dark:bg-zinc-800 dark:ring-2 dark:ring-blue-950 dark:ring-offset-4 dark:ring-offset-zinc-800"
-        priority
-      />
-    </Link>
-  )
-}
-
-function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path
-        fillRule="evenodd"
-        d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
-      />
-    </svg>
-  )
-}
-
 function SocialLink({
-  className,
   href,
-  children,
   icon: Icon,
+  ...props
 }: {
-  className?: string,
-  href: string,
+  href: string
   icon: React.ComponentType<{ className?: string }>
-  children?: React.ReactNode
+  'aria-label': string
 }) {
   return (
-    <Link
-      href={href}
-      className={clsx(className, 'group flex items-center text-sm font-medium text-zinc-500 transition hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300')}
-    >
-      <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-      {children && (
-        <span className="ml-3">{children}</span>
-      )}
+    <Link href={href} className="group" {...props}>
+      <Icon className="h-6 w-6 fill-theme-muted transition-colors group-hover:fill-theme-text" />
     </Link>
+  )
+}
+
+function Section({
+  title,
+  items,
+  large = false,
+}: {
+  title: string
+  items: { title: string, body: string, href?: string }[]
+  large?: boolean
+}) {
+  return (
+    <section className="mt-24 grid grid-cols-1 gap-x-8 gap-y-8 border-t border-theme-text pt-6 md:grid-cols-12 md:items-baseline lg:mt-32">
+      <h2 className="font-mono text-xs uppercase tracking-wide text-theme-muted md:col-span-3">
+        {title}
+      </h2>
+      <ul role="list" className="divide-y divide-theme-rule md:col-span-9">
+        {items.map((item) => (
+          <li
+            key={item.title}
+            className="grid grid-cols-1 gap-x-8 gap-y-2 py-6 first:pt-0 last:pb-0 sm:grid-cols-9 sm:items-baseline"
+          >
+            <h3 className={`${large ? 'text-2xl tracking-tight' : 'text-lg'} font-medium sm:col-span-3`}>
+              {item.href ? (
+                <a
+                  href={item.href}
+                  className="text-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {item.title}
+                </a>
+              ) : item.title}
+            </h3>
+            <p className="text-pretty text-base text-theme-muted sm:col-span-6">
+              {item.body}
+            </p>
+          </li>
+        ))}
+      </ul>
+    </section>
   )
 }
 
@@ -112,108 +117,68 @@ const projects = [
 
 export default function Home() {
   return (
-    <>
-      <Container className="mt-12 lg:mt-16">
-        <div className="max-w-4xl flex flex-col items-center text-center mx-auto">
-          <Avatar />
-          <div className="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            <p className="text-4xl mb-2">Hi, I&apos;m Laurens Kuiper.</p>
-            <h1 className="text-3xl/none">
-              Laravel Certified Developer &amp; Statamic Certified Partner.
-            </h1>
-          </div>
+    <Container className="pt-12 lg:pt-20">
+      <p className="text-7xl font-semibold tracking-tighter sm:text-8xl lg:text-9xl">
+        <span className="block">Hi, I&apos;m</span>{' '}
+        <span className="block">Laurens Kuiper.</span>
+      </p>
+      <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-12 lg:mt-16">
+        <div className="md:col-span-3">
+          <Image
+            src={avatarImage}
+            alt="Photo of Laurens Kuiper"
+            sizes="(min-width: 1152px) 16rem, (min-width: 768px) 25vw, 12rem"
+            className="aspect-square w-48 object-cover md:w-full"
+            priority
+          />
         </div>
-        <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        <div className="flex flex-col justify-between gap-y-6 md:col-span-9">
+          <h1 className="text-balance text-3xl font-medium tracking-tight lg:text-5xl lg:leading-tight">
+            Laravel Certified Developer &amp; Statamic Certified Partner.
+          </h1>
+          <p className="max-w-xl text-pretty text-lg">
             I&apos;m a freelance Statamic, Laravel and Filament developer based in Haarlem, the Netherlands, building and running production websites since 2012.
             I build, integrate and maintain websites and apps for agencies and businesses across Europe.
           </p>
         </div>
-        <div className="max-w-3xl mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
-          <h2 className="text-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-            What I do
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {services.map((service) => (
-              <div key={service.title}>
-                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  {service.body}
-                </p>
-              </div>
-            ))}
+      </div>
+      <Section title="What I do" items={services} />
+      <Section title="Selected work" items={projects} large />
+      <section className="mt-24 border-t border-theme-text pt-10 lg:mt-32 lg:pt-12">
+        <p className="max-w-[26ch] text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+          Tell me what you are building or what needs taking over.
+        </p>
+        <div className="mt-10 flex flex-wrap items-center gap-x-10 gap-y-8">
+          <MailButton />
+          <div className="flex items-center gap-10">
+            <Link href="/about" className="text-link text-base font-medium">
+              About me
+            </Link>
+            <div className="flex gap-6">
+              <SocialLink
+                href="https://www.linkedin.com/in/lwekuiper/"
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+              <SocialLink
+                href="https://github.com/lwekuiper"
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href="https://x.com/lwekuiper"
+                aria-label="Follow on X"
+                icon={XIcon}
+              />
+              <SocialLink
+                href="https://www.instagram.com/lwekuiper/"
+                aria-label="Follow on Instagram"
+                icon={InstagramIcon}
+              />
+            </div>
           </div>
         </div>
-        <div className="max-w-3xl mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
-          <h2 className="text-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
-            Selected work
-          </h2>
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {projects.map((project) => (
-              <div key={project.title}>
-                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                  {project.href ? (
-                    <a
-                      href={project.href}
-                      className="underline decoration-zinc-500 underline-offset-4 transition hover:decoration-zinc-300"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {project.title}
-                    </a>
-                  ) : project.title}
-                </h3>
-                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  {project.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="max-w-3xl flex flex-col items-center text-center mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
-          <p className="text-base text-zinc-600 dark:text-zinc-400">
-            Tell me what you are building or what needs taking over.
-          </p>
-          <SocialLink
-            href="mailto:laurens@laurenskuiper.com"
-            aria-label="Send an email"
-            icon={MailIcon}
-            className="mt-6"
-          >
-            laurens@laurenskuiper.com
-          </SocialLink>
-          <Link
-            href="/about"
-            className="mt-4 text-sm font-medium text-zinc-500 underline transition hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300"
-          >
-            About me
-          </Link>
-          <div className="mt-6 flex gap-6 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
-            <SocialLink
-              href="https://www.linkedin.com/in/lwekuiper/"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-            <SocialLink
-              href="https://github.com/lwekuiper"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://x.com/lwekuiper"
-              aria-label="Follow on X"
-              icon={XIcon}
-            />
-            <SocialLink
-              href="https://www.instagram.com/lwekuiper/"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-          </div>
-        </div>
-      </Container>
-    </>
+      </section>
+    </Container>
   );
 }

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import Script from "next/script";
 import { Person, WithContext } from "schema-dts";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
 
 const description = 'Freelance Statamic, Laravel and Filament developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.'
 
@@ -83,8 +83,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark h-full antialiased" suppressHydrationWarning>
-      <body className="flex h-full bg-zinc-50 dark:bg-black">
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <body className="flex min-h-full flex-col bg-theme-bg font-sans text-theme-text">
 
         <Script
           id="person-schema"
@@ -92,16 +96,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
 
-        <div className="fixed inset-0 flex justify-center sm:px-8">
-          <div className="flex w-full max-w-7xl lg:px-8">
-            <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
-          </div>
-        </div>
-
-        <div className="relative flex w-full flex-col">
-          <main className="flex-auto">{children}</main>
-          <Footer />
-        </div>
+        <Header />
+        <main className="flex-auto">{children}</main>
+        <Footer />
 
       </body>
 
