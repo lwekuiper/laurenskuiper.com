@@ -33,14 +33,14 @@ export function Footer() {
                 <Link href="https://verifier.certificationforlaravel.org/cafa8da6-212f-4a82-bc21-7c016448bdc2">
                   <Image
                     src={laravelBadge}
-                    alt="Certified Senior Laravel Developer"
+                    alt="Laravel Certified Developer"
                     className="ml-6 w-[7.5rem] md:w-[9rem]"
                   />
                 </Link>
                 <Link href="https://statamic.com/partners/laurens-kuiper">
                   <Image
                     src={statamicBadge}
-                    alt="Statamic CMS Partner"
+                    alt="Statamic Certified Partner"
                     className="w-40 md:w-48"
                   />
                 </Link>

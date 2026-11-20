@@ -9,12 +9,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 import { Footer } from '@/components/Footer'
 
+const description = 'Freelance Laravel, Filament and Statamic developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.'
+
 export const metadata: Metadata = {
   title: {
-    template: '%s - Laurens Kuiper',
-    default: 'Laurens Kuiper - Laravel Certified Developer & Statamic CMS partner',
+    template: '%s | Laurens Kuiper',
+    default: 'Laurens Kuiper | Laravel Certified Developer & Statamic Certified Partner',
   },
-  description: "I'm an experienced full stack developer based in Haarlem, The Netherlands. With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, Alpine.js, VueJS, Tailwind CSS and GSAP.",
+  description,
+  openGraph: {
+    title: 'Laurens Kuiper | Laravel Certified Developer & Statamic Certified Partner',
+    description,
+    url: 'https://www.laurenskuiper.com',
+    siteName: 'Laurens Kuiper',
+    type: 'website',
+    images: [{ url: 'https://www.laurenskuiper.com/laurens-kuiper.jpg', width: 800, height: 800, alt: 'Photo of Laurens Kuiper' }],
+  },
 }
 
 const jsonLd: WithContext<Person> = {
@@ -23,43 +33,47 @@ const jsonLd: WithContext<Person> = {
   name: 'Laurens Kuiper',
   alternateName: 'Laurens',
   email: 'mailto:laurens@laurenskuiper.com',
-  jobTitle: 'Senior Software Engineer',
+  jobTitle: 'Freelance Laravel, Filament and Statamic Developer',
   url: 'https://www.laurenskuiper.com',
-  worksFor: {
-    '@type': 'Organization',
-    name: 'Freelance'
-  },
   sameAs: [
-    'https://www.linkedin.com/in/lwekuiper',
+    'https://www.linkedin.com/in/lwekuiper/',
     'https://github.com/lwekuiper',
-    'https://twitter.com/lwekuiper',
-    'https://instagram.com/lwekuiper'
+    'https://x.com/lwekuiper',
+    'https://www.instagram.com/lwekuiper/',
+    'https://statamic.com/partners/laurens-kuiper',
+    'https://statamic.com/creators/lwekuiper',
+    'https://packagist.org/users/lwekuiper/'
   ],
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Haarlem',
     addressCountry: 'NL'
   },
-  description: 'Senior software engineer with a specialization in Laravel, Statamic CMS and Vue.js.',
-  knowsAbout: ['Laravel', 'Statamic CMS', 'Livewire', 'Vue.js', 'Tailwind CSS', 'GSAP', 'DevOps'],
+  description,
+  knowsAbout: ['Laravel', 'Filament', 'Statamic', 'Livewire', 'Alpine.js', 'Tailwind CSS'],
   knowsLanguage: ['nl', 'en', 'es'],
   nationality: 'NL',
-  image: 'https://www.laurenskuiper.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.98f1710c.png&w=3840',
+  image: 'https://www.laurenskuiper.com/laurens-kuiper.jpg',
   subjectOf: [
     {
       '@type': 'CreativeWork',
-      name: 'Ushuaïa Ibiza',
-      url: 'https://www.theushuaiaexperience.com/en/club'
+      name: 'UD Ibiza',
+      url: 'https://www.ibizaud.com'
     },
     {
       '@type': 'CreativeWork',
-      name: 'Playa Soleil',
-      url: 'https://www.playasoleil.com'
+      name: 'Unlock Adventures',
+      url: 'https://www.unlockadventures.nl'
     },
     {
       '@type': 'SoftwareApplication',
       name: 'ActiveCampaign Addon',
       url: 'https://statamic.com/addons/lwekuiper/activecampaign'
+    },
+    {
+      '@type': 'SoftwareApplication',
+      name: 'HubSpot Addon',
+      url: 'https://statamic.com/addons/lwekuiper/hubspot'
     }
   ]
 };
