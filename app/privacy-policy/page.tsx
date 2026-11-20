@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description: 'Privacy policy for services provided by Laurens Kuiper.',
+  alternates: { canonical: '/privacy-policy' },
 }
 
 export default function Privacy() {

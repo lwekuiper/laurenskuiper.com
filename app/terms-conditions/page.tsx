@@ -4,6 +4,7 @@ import { Container } from '@/components/Container'
 export const metadata: Metadata = {
   title: 'Terms & Conditions',
   description: 'Terms and conditions for services provided by Laurens Kuiper.',
+  alternates: { canonical: '/terms-conditions' },
 }
 
 export default function Terms() {

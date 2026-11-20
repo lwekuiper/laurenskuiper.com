@@ -15,6 +15,7 @@ import portraitImage from '@/images/avatar.png'
 export const metadata: Metadata = {
   title: 'About',
   description: 'Laurens Kuiper is a freelance Laravel, Filament and Statamic developer based in Haarlem, the Netherlands, building and running production websites since 2012.',
+  alternates: { canonical: '/about' },
 }
 
 function SocialLink({

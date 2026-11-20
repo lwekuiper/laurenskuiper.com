@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Image from "next/image"
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -10,6 +11,10 @@ import {
   XIcon,
 } from '@/components/SocialIcons'
 import avatarImage from '@/images/avatar.png'
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+}
 
 function Avatar() {
   return (

@@ -12,6 +12,7 @@ import { Footer } from '@/components/Footer'
 const description = 'Freelance Laravel, Filament and Statamic developer in Haarlem, Netherlands. I build, integrate and maintain websites and apps for agencies and businesses across Europe.'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.laurenskuiper.com'),
   title: {
     template: '%s | Laurens Kuiper',
     default: 'Laurens Kuiper | Laravel Certified Developer & Statamic Certified Partner',
@@ -20,7 +21,6 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Laurens Kuiper | Laravel Certified Developer & Statamic Certified Partner',
     description,
-    url: 'https://www.laurenskuiper.com',
     siteName: 'Laurens Kuiper',
     type: 'website',
     images: [{ url: 'https://www.laurenskuiper.com/laurens-kuiper.jpg', width: 800, height: 800, alt: 'Photo of Laurens Kuiper' }],
