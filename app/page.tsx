@@ -64,6 +64,33 @@ function SocialLink({
   )
 }
 
+const services = [
+  {
+    title: 'Statamic sites',
+    body: 'Editor-friendly Statamic builds, multi-site and multilingual setups and moves from WordPress.',
+  },
+  {
+    title: 'Laravel and Filament apps',
+    body: 'Laravel applications with Filament admin panels, payments and subscriptions, handed over documented and tested.',
+  },
+  {
+    title: 'Integrations',
+    body: 'Your site connected to the systems you already run: CRMs, ticketing, shops and payments. My own Statamic addons do this for ActiveCampaign, HubSpot, Acumbamail and Zapier.',
+  },
+  {
+    title: 'Maintenance and takeovers',
+    body: 'Upgrades, security updates and monitoring for live sites, as an ongoing agreement or per task. I also take over existing Laravel and Statamic sites when their developer moves on.',
+  },
+]
+
+function ExternalLink({ href, children }: { href: string, children: React.ReactNode }) {
+  return (
+    <a href={href} className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">
+      {children}
+    </a>
+  )
+}
+
 export default function Home() {
   return (
     <>
@@ -73,17 +100,40 @@ export default function Home() {
           <div className="mt-6 text-3xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             <p className="text-4xl mb-2">Hi, I&apos;m Laurens Kuiper.</p>
             <h1 className="text-3xl/none">
-              Laravel Certified Developer & Statamic CMS partner.
+              Laravel Certified Developer &amp; Statamic Certified Partner.
             </h1>
           </div>
         </div>
         <div className="max-w-3xl flex flex-col items-center text-center mx-auto">
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m an experienced full stack developer based in Haarlem, The Netherlands.<br />
-            With 12+ years of experience I specialize in Laravel and Statamic CMS, and am skilled in Livewire, Alpine.js, VueJS, Tailwind CSS and GSAP.
+            I&apos;m a freelance Laravel, Filament and Statamic developer based in Haarlem, the Netherlands, building and running production websites since 2012.
+            I build, integrate and maintain websites and apps for agencies and businesses across Europe.
+          </p>
+        </div>
+        <div className="max-w-3xl mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
+          <h2 className="text-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+            What I do
+          </h2>
+          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {services.map((service) => (
+              <div key={service.title}>
+                <h3 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                  {service.title}
+                </h3>
+                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                  {service.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="max-w-3xl flex flex-col items-center text-center mx-auto mt-12 border-t border-zinc-100 pt-10 dark:border-zinc-700/40">
+          <p className="text-base text-zinc-600 dark:text-zinc-400">
+            Projects include <ExternalLink href="https://www.ibizaud.com">UD Ibiza</ExternalLink>, <ExternalLink href="https://www.unlockadventures.nl">Unlock Adventures</ExternalLink> and my own <ExternalLink href="https://statamic.com/creators/lwekuiper">Statamic addons</ExternalLink>.
+            I also built and maintained the Ushuaïa Ibiza website.
           </p>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            Recent projects include <a href="https://www.theushuaiaexperience.com/en/club" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Ushuaïa Ibiza</a>, <a href="https://www.playasoleil.com" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">Playa Soleil</a> and an <a href="https://statamic.com/addons/lwekuiper/activecampaign" className="underline text-blue-400 transition hover:text-zinc-300" target="_blank" rel="noreferrer">ActiveCampaign addon</a>.
+            Tell me what you are building or what needs taking over.
           </p>
           <SocialLink
             href="mailto:laurens@laurenskuiper.com"
@@ -93,6 +143,12 @@ export default function Home() {
           >
             laurens@laurenskuiper.com
           </SocialLink>
+          <Link
+            href="/about"
+            className="mt-4 text-sm font-medium text-zinc-500 underline transition hover:text-zinc-600 dark:text-zinc-400 dark:hover:text-zinc-300"
+          >
+            About me
+          </Link>
           <div className="mt-6 flex gap-6 border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
             <SocialLink
               href="https://www.linkedin.com/in/lwekuiper/"
